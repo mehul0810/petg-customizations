@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: PETG Customizations
- * Description: Customizations for the PETG website.
- * Version: 1.0.0
+ * Plugin Name: PetGratitude Customizations
+ * Description: Customizations for the PetGratitude website.
+ * Version: 1.0.1
  * Author: Mehul Gohil
  * Author URI: https://mehulgohil.com
  */
