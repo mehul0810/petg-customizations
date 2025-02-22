@@ -1,0 +1,88 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ecc01fa1e1f0316b4f66b33bd6b49a34",
+    "packages": [
+        {
+            "name": "mehul0810/updatesync",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mehul0810/updatesync.git",
+                "reference": "3b0656be65d21d220ea6c87b68d300c8ba3070ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mehul0810/updatesync/zipball/3b0656be65d21d220ea6c87b68d300c8ba3070ad",
+                "reference": "3b0656be65d21d220ea6c87b68d300c8ba3070ad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "phpstan/phpstan": "^1.9",
+                "squizlabs/php_codesniffer": "^3.7",
+                "wp-coding-standards/wpcs": "^2.3"
+            },
+            "default-branch": true,
+            "type": "wordpress-plugin",
+            "extra": {
+                "phpcodesniffer": {
+                    "installed_paths": [
+                        "vendor/wp-coding-standards/wpcs"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MG\\UpdateSync\\": "src/"
+                }
+            },
+            "scripts": {
+                "phpcs": [
+                    "vendor/bin/phpcs --standard=WordPress src/"
+                ],
+                "phpstan": [
+                    "vendor/bin/phpstan analyse --level=max src"
+                ],
+                "audit": [
+                    "composer audit"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mehul Gohil",
+                    "email": "hello@mehulgohil.com"
+                }
+            ],
+            "description": "UpdateSync is a composer package to help developers provide automatic updates to their WordPress plugins and themes using GitHub.",
+            "homepage": "https://github.com/mehul0810/updatesync",
+            "support": {
+                "source": "https://github.com/mehul0810/updatesync/tree/1.0.0",
+                "issues": "https://github.com/mehul0810/updatesync/issues"
+            },
+            "time": "2025-02-14T11:49:59+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "mehul0810/updatesync": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.1"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

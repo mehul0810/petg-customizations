@@ -1,0 +1,20 @@
+{
+    "name": "mehulgohil/petg-customizations",
+    "description": "Customizations for the Pet Gratitude website",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=8.1",
+        "mehul0810/updatesync": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mehul0810/updatesync"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MG\\PetG\\": "src/"
+        }
+    }
+}
