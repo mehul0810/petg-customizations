@@ -2,11 +2,14 @@ name: Build Plugin Release
 
 on:
   release:
-    types: [ released ]
+    types: [released]
+
+permissions:
+  contents: write  # This is required to upload release assets
 
 jobs:
   build:
-    name:    Build Plugin Artifact
+    name: Build Plugin Artifact
     runs-on: ubuntu-latest
 
     steps:
@@ -22,12 +25,13 @@ jobs:
           rsync -rc --exclude-from="$GITHUB_WORKSPACE/.distignore" "$GITHUB_WORKSPACE/" release/ --delete --delete-excluded
           cd "${GITHUB_WORKSPACE}/release" || exit
           zip -r "${GITHUB_WORKSPACE}/petg-customizations.zip" .
+
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{github.workspace}}/petg-customizations.zip
+          asset_path: ${{ github.workspace }}/petg-customizations.zip
           asset_name: petg-customizations.zip
           asset_content_type: application/zip
